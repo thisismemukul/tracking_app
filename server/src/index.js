@@ -8,7 +8,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(authRoutes);
-const mongoURI = 'mongodb+srv://thisismemukul:0VYPbULMpfMr1fb6@cluster0.myrvduq.mongodb.net/?retryWrites=true&w=majority';
+const mongoURI = 'mongodb+srv://thisismemukul:0VYPbULMpfMr1fb6@cluster0.myrvduq.mongodb.net/tracking_app?retryWrites=true&w=majority';
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.on('connected', () => {
     console.log('Connected to mongo instance');
